@@ -7,6 +7,11 @@
 				<span> {{ .Site.Title }} <span class = "whbcit8_yellow">{{ .Params.streamtitle }}</span></span>
 			</section>
 			<section>
+			{{ if eq .Title "About" }}
+				{{ partial "fa-links-to-me.html" .}}
+			{{ end }}
+			</section>
+			<section>
 				<span class="whbcit8_title2">{{ if eq .Params.timeless "true" }}{{ else }}{{ .Date.Format "2006 January" }}: {{ end }}<span class = "whbcit8_yellow">{{.Title }}</span></span>
 				{{.Content}}
 			</section>
