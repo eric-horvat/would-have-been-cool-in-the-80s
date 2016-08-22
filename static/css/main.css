@@ -98,7 +98,7 @@ textarea {
 /*OVERRIDE STYLES*/ /*This isn't a good name for this, as the redundant style is the one that should be removed...*/
 /*Maybe I should give these classes?*/
 /*html, body {height: 100%;}*/ /*for footer*/
-body {font: 400 1.2rem "Montserrat",sans-serif;}
+body {font: 400 1.5rem "Montserrat",sans-serif;}
 section{margin: 2rem 0;}
 
 /*REUSABLE ELEMENTS OF STYLE*/
@@ -110,7 +110,7 @@ a:hover {color: #F29C01; outline: 0;}
 a:active {position: relative; top: 0.1rem; left: 0.1rem;}
 
 /*SPECIFIC STYLES*/
-.whbcit8_title1{margin: 0 0 1rem 0; text-transform: uppercase; font: 700 3.0rem "Montserrat",sans-serif;}
+.whbcit8_title1{margin: 0 0 1rem 0; text-transform: uppercase; font: 700 4.0rem "Montserrat",sans-serif;}
 .whbcit8_tagline{font: 400 1.6rem "Montserrat",sans-serif; transform: skewX(-15deg); z-index: 1;} /*Maybe remove this skew thing, replace with: text-decoration: underline; */
 .whbcit8_title2{text-transform: uppercase; margin: 1rem 0 0.5rem 0; font: 700 1.8rem "Montserrat",sans-serif;}
 .whbcit8_hiddenbullets{list-style-type: none; padding:0;}
