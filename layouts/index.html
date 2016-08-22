@@ -17,19 +17,19 @@
 				{{ end }}
 			{{ end }}
 			{{if lt 0 (len (where .Data.Pages ".Params.timeless" "=" "true"))}}
-			<section id="post_index">
-				<span class="whbcit8_title2">Pages:</span>
-				<ul id="page_list">
-				{{ range (where .Data.Pages ".Params.timeless" "=" "true") }}{{ .Render "postsummary" }}{{ end }}
-				</ul>
-			</section>
-			{{end}}
-			{{if lt 0 (len (where .Data.Pages ".Params.timeless" "=" "false"))}}
-			<section id="blog_index">
-				<span class="whbcit8_title2">Posts:</span>
-				<ul id="post_list">
-					{{ range (where .Data.Pages ".Params.timeless" "=" "false") }}{{ .Render "postsummary" }}{{ end }}
-				</ul>
+			<section>
+			  <ul>
+			    {{ range $taxonomyname, $taxonomy := .Site.Taxonomies }}
+		          {{ range $key, $value := $taxonomy }}
+		          <li> {{ $key }} </li>
+		                <ul>
+		                {{ range $value.Pages }}
+		                    <li hugo-nav="{{ .RelPermalink}}"><a href="{{ .Permalink}}"> {{ .LinkTitle }} </a> </li>
+		                {{ end }}
+		                </ul>
+		          {{ end }}
+			    {{ end }}
+			  </ul>
 			</section>
 			{{end}}
 		</article>
